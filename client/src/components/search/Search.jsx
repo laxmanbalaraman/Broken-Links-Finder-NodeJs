@@ -12,7 +12,7 @@ export default function Search({ setBrokenLinks, setShowResult }) {
         <p>
           Find Broken links in your website using our unique web crawling bot
         </p>
-        <Form />
+        <Form setBrokenLinks={setBrokenLinks} setShowResult={setShowResult} />
       </div>
     </div>
   );

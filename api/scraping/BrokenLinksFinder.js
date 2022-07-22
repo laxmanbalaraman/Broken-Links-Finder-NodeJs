@@ -34,7 +34,7 @@ const findBrokenLinks = async (URL) => {
   // console.log(visited.size);
 };
 
-findBrokenLinks("https://alanwalker.com/");
+// findBrokenLinks("https://alanwalker.com/");
 
 // getHTML(
 //   "https://www.keybr.com/auth/oauth-init/facebook",
