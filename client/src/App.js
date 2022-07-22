@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import Search from "./components/search/Search";
 import { ssEvents } from "./config/config";
 import "./app.css";
+import Result from "./components/result/Result";
 function App() {
   const [crawledCount, setCrawledCount] = useState(0);
   const [brokenLinksCount, setbrokenLinksCount] = useState(0);
@@ -31,6 +32,11 @@ function App() {
           <Search
             setBrokenLinks={setBrokenLinks}
             setShowResult={setShowResult}
+          />
+          <Result
+            brokenLinks={brokenLinks}
+            crawledCount={crawledCount}
+            brokenLinksCount={brokenLinksCount}
           />
         </div>
       </header>

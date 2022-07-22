@@ -9,6 +9,10 @@
   position: relative;
 }
 
+body {
+  background-color: #1f1f1f;
+}
+
 @media only screen and (max-width: 500px) {
   .hero {
     padding: 0 3rem;
