@@ -70,6 +70,7 @@
   width: 65%;
   border-spacing: 0.75rem;
   margin-top: 3rem;
+  overflow-x: scroll;
 }
 
 table > thead {

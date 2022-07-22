@@ -13,9 +13,10 @@ function Form({ setBrokenLinks, setShowResult }) {
         `http://localhost:5000/find/?link=${link}`,
         {}
       );
+      // for (const item in brokenLinks) {
+      // }
       console.log(brokenLinks);
-      setBrokenLinks(brokenLinks.data);
-      console.log(brokenLinks.data);
+      setBrokenLinks(JSON.parse(brokenLinks.data.split(" ").join("")));
     } catch (error) {
       console.log(error);
     }

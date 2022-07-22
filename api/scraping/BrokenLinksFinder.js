@@ -5,7 +5,7 @@ const sse = require("../sse/sse");
 const findBrokenLinks = async (URL) => {
   console.log("url is ", URL);
   // bfs algorithm
-  const brokenLinks = new Set();
+  let brokenLinks = new Set();
   const queue = [];
   queue.push(URL);
   const visited = new Map();
@@ -26,10 +26,11 @@ const findBrokenLinks = async (URL) => {
     } catch (error) {
       console.log(error.message, error.statusCode, error.statusMessage);
       console.log("found", url);
-      brokenLinks.add(url);
+      brokenLinks.add({ url: url, status: error.statusCode });
     }
   }
-  // console.log(brokenLinks);
+  brokenLinks = JSON.stringify([...brokenLinks]);
+  console.log("blf is", brokenLinks);
   return brokenLinks;
   // console.log(visited.size);
 };

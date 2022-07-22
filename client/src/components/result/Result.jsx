@@ -3,7 +3,8 @@ import "../result/result.css";
 import loading from "../../assets/loading.svg";
 
 function Result({ brokenLinks, crawledCount, brokenLinksCount }) {
-  brokenLinks = "hellofdsafmlaskdgmkldsanmfs;gmsdlkgmldfsmglk hello helko";
+  // brokenLinks = "hellofdsafmlaskdgmkldsanmfs;gmsdlkgmldfsmglk hello helko";
+  console.log("yo the bl is ", brokenLinks);
   return (
     <div className="result">
       <h2 className="result-heading"> Results </h2>
@@ -34,11 +35,15 @@ function Result({ brokenLinks, crawledCount, brokenLinksCount }) {
             <td className="status-code">status code</td>
           </thead>
           <tbody>
-            {brokenLinks.split(" ").map((link) => (
-              <tr key={link}>
-                <a href={link} target="_blank">
-                  {link} <i class="fa fa-external-link" aria-hidden="true"></i>
-                </a>
+            {brokenLinks.map((link) => (
+              <tr key={link["url"]}>
+                <td>
+                  <a href={link["url"]} target="_blank">
+                    {link["url"]}{" "}
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+                </td>
+                <td> {link["status"]} </td>
               </tr>
             ))}
           </tbody>
