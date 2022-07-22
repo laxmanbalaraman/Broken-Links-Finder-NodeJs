@@ -1,4 +1,5 @@
 import Navbar from "./components/navbar/Navbar";
+import Search from "./components/search/Search";
 import "./app.css";
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header className="App-header">
         <div className="hero">
           <Navbar />
+          <Search />
         </div>
       </header>
     </div>

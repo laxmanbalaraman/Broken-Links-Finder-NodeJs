@@ -1,0 +1,32 @@
+.input-link {
+  padding: 0.75rem;
+  background-color: transparent;
+  border-color: white;
+  width: 85%;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1em;
+  outline: none;
+  margin-top: 1rem;
+}
+
+.Form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.submit {
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: "poppins";
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgb(135, 223, 3);
+  width: 7rem;
+  color: #000;
+  cursor: pointer;
+}

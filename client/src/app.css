@@ -1,5 +1,16 @@
 .hero {
   height: 100vh;
-  background-color: #041029;
+  background-color: #1f1f1f;
   padding: 0 7rem;
+  background-image: url("./assets/PolygonLuminary.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+}
+
+@media only screen and (max-width: 500px) {
+  .hero {
+    padding: 0 3rem;
+  }
 }
