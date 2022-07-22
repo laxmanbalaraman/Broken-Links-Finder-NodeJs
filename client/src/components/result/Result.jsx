@@ -3,6 +3,7 @@ import "../result/result.css";
 import loading from "../../assets/loading.svg";
 
 function Result({ brokenLinks, crawledCount, brokenLinksCount }) {
+  brokenLinks = "hellofdsafmlaskdgmkldsanmfs;gmsdlkgmldfsmglk hello helko";
   return (
     <div className="result">
       <h2 className="result-heading"> Results </h2>
@@ -17,12 +18,32 @@ function Result({ brokenLinks, crawledCount, brokenLinksCount }) {
           <span class="b-count">{brokenLinksCount}</span>
         </div>
       </div>
-      <div className="search-svg">
-        {<img src={loading} alt="Loading" />}
-        <div className="loadingCaption">
-          <p>Please wait till our bot scans through your website...</p>
+      {!brokenLinks && (
+        <div className="search-svg">
+          {<img src={loading} alt="Loading" />}
+          <div className="loadingCaption">
+            <p>Please wait till our bot scans through your website...</p>
+          </div>
         </div>
-      </div>
+      )}
+
+      {brokenLinks && (
+        <table className="resultTable">
+          <thead>
+            <td className="link">Link</td>
+            <td className="status-code">status code</td>
+          </thead>
+          <tbody>
+            {brokenLinks.split(" ").map((link) => (
+              <tr key={link}>
+                <a href={link} target="_blank">
+                  {link} <i class="fa fa-external-link" aria-hidden="true"></i>
+                </a>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 }

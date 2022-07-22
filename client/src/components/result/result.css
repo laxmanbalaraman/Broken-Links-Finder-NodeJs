@@ -5,6 +5,7 @@
   font-family: "poppins";
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .result-heading {
@@ -26,6 +27,7 @@
 }
 
 .meta-info {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   margin-top: 3rem;
@@ -49,11 +51,50 @@
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
 .loadingCaption {
   color: grey;
   letter-spacing: 2px;
+  margin-top: 2rem;
+}
+
+.resultTable {
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 65%;
+  border-spacing: 0.75rem;
+  margin-top: 3rem;
+}
+
+table > thead {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(125, 208, 0);
+  letter-spacing: 2px;
+}
+.link {
+  width: 70%;
+}
+
+.status-code {
+}
+
+.resultTable thead {
+  border: 1px solid grey;
+}
+
+.resultTable tr a {
+  color: rgb(51, 86, 241);
+  text-decoration: none;
+}
+
+.resultTable tr {
+  padding: 1rem;
+  margin: 1rem;
 }
