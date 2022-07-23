@@ -4,6 +4,8 @@ import Search from "./components/search/Search";
 import { ssEvents } from "./config/config";
 import "./app.css";
 import Result from "./components/result/Result";
+import About from "./components/about/About";
+import Footer from "./components/footer/Footer";
 function App() {
   const [crawledCount, setCrawledCount] = useState(0);
   const [brokenLinksCount, setbrokenLinksCount] = useState(0);
@@ -38,6 +40,8 @@ function App() {
             crawledCount={crawledCount}
             brokenLinksCount={brokenLinksCount}
           />
+          <About />
+          <Footer />
         </div>
       </header>
     </div>

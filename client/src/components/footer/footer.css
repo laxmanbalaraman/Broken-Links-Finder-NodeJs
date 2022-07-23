@@ -1,0 +1,11 @@
+.footer {
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: "poppins";
+  letter-spacing: 2px;
+}
+
+.icon {
+  color: rgb(0, 201, 0);
+}

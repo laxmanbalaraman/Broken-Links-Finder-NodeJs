@@ -29,25 +29,27 @@ function Result({ brokenLinks, crawledCount, brokenLinksCount }) {
       )}
 
       {brokenLinks && (
-        <table className="resultTable">
-          <thead>
-            <td className="link">Link</td>
-            <td className="status-code">status code</td>
-          </thead>
-          <tbody>
-            {brokenLinks.map((link) => (
-              <tr key={link["url"]}>
-                <td>
-                  <a href={link["url"]} target="_blank">
-                    {link["url"]}{" "}
-                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                  </a>
-                </td>
-                <td> {link["status"]} </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div style={{ "overflow-x": "auto" }}>
+          <table className="resultTable">
+            <thead>
+              <td className="link">Link</td>
+              <td className="status-code">status code</td>
+            </thead>
+            <tbody>
+              {brokenLinks.map((link) => (
+                <tr key={link["url"]}>
+                  <td>
+                    <a href={link["url"]} target="_blank">
+                      {link["url"]}{" "}
+                      <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                  </td>
+                  <td> {link["status"]} </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );

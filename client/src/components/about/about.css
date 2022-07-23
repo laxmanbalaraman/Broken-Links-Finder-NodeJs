@@ -1,0 +1,19 @@
+.about {
+  font-family: "poppins";
+  margin-bottom: 3rem;
+}
+
+.about > h2 {
+  text-align: center;
+  color: rgb(198, 209, 0);
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin: 2rem 0;
+  box-sizing: border-box;
+}
+
+.about > p {
+  font-size: 1.15rem;
+  color: rgb(198, 198, 198);
+  line-height: 2rem;
+}
