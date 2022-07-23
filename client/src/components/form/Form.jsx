@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./form.css";
-function Form({ setBrokenLinks, setShowResult }) {
+function Form({ setBrokenLinks, setShowResult, setLoadingIcon }) {
   const [link, setLink] = useState("");
   setShowResult(true);
   console.log("link is ", link);
+
+  const handleBtnClick = () => {
+    setBrokenLinks([]);
+    setLoadingIcon(true);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     // setShowResult(true);
@@ -15,8 +21,10 @@ function Form({ setBrokenLinks, setShowResult }) {
       );
       // for (const item in brokenLinks) {
       // }
+      setLoadingIcon(false);
       console.log(brokenLinks);
-      setBrokenLinks(JSON.parse(brokenLinks.data.split(" ").join("")));
+      brokenLinks.data.length > 0 &&
+        setBrokenLinks(JSON.parse(brokenLinks.data.split(" ").join("")));
     } catch (error) {
       console.log(error);
     }
@@ -35,7 +43,7 @@ function Form({ setBrokenLinks, setShowResult }) {
           type="link"
           className="input-link"
         />
-        <button type="submit" className="submit">
+        <button type="submit" onClick={handleBtnClick} className="submit">
           Find Links
         </button>
       </form>

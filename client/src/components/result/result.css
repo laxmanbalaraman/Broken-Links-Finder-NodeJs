@@ -1,5 +1,5 @@
 .result {
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: #1f1f1f;
   padding: 3rem 0;
   font-family: "poppins";
@@ -67,10 +67,11 @@
   border: 1px solid white;
   padding: 1rem;
   border-radius: 10px;
-  width: 65%;
   border-spacing: 0.75rem;
   margin-top: 3rem;
-  overflow-x: scroll;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 table > thead {
@@ -81,9 +82,6 @@ table > thead {
 }
 .link {
   width: 70%;
-}
-
-.status-code {
 }
 
 .resultTable thead {
@@ -98,4 +96,15 @@ table > thead {
 .resultTable tr {
   padding: 1rem;
   margin: 1rem;
+}
+
+.no-broken {
+  margin: 8rem 0;
+  color: rgb(135, 135, 135);
+  font-size: 1.5rem;
+}
+
+.no-broken i {
+  color: rgb(0, 177, 0);
+  font-size: 1.5em;
 }

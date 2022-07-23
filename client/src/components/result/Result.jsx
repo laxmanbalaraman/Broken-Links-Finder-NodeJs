@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../result/result.css";
 import loading from "../../assets/loading.svg";
 
-function Result({ brokenLinks, crawledCount, brokenLinksCount }) {
-  // brokenLinks = "hellofdsafmlaskdgmkldsanmfs;gmsdlkgmldfsmglk hello helko";
+function Result({ brokenLinks, crawledCount, brokenLinksCount, loadingIcon }) {
   console.log("yo the bl is ", brokenLinks);
   return (
     <div className="result">
@@ -19,7 +18,7 @@ function Result({ brokenLinks, crawledCount, brokenLinksCount }) {
           <span class="b-count">{brokenLinksCount}</span>
         </div>
       </div>
-      {!brokenLinks && (
+      {loadingIcon && (
         <div className="search-svg">
           {<img src={loading} alt="Loading" />}
           <div className="loadingCaption">
@@ -28,7 +27,7 @@ function Result({ brokenLinks, crawledCount, brokenLinksCount }) {
         </div>
       )}
 
-      {brokenLinks && (
+      {brokenLinks.length > 0 ? (
         <div style={{ "overflow-x": "auto" }}>
           <table className="resultTable">
             <thead>
@@ -50,6 +49,13 @@ function Result({ brokenLinks, crawledCount, brokenLinksCount }) {
             </tbody>
           </table>
         </div>
+      ) : (
+        !loadingIcon && (
+          <div className="no-broken">
+            <i class="fa fa-check" aria-hidden="true"></i> Congrats Your website
+            has no broken Links!!
+          </div>
+        )
       )}
     </div>
   );
