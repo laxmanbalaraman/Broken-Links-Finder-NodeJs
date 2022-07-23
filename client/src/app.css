@@ -9,6 +9,22 @@
   position: relative;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #505050;
+  border-radius: 5px;
+}
+
 body {
   background-color: #1f1f1f;
 }

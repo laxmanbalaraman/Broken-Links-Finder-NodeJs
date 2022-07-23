@@ -5,7 +5,7 @@ import loading from "../../assets/loading.svg";
 function Result({ brokenLinks, crawledCount, brokenLinksCount, loadingIcon }) {
   console.log("yo the bl is ", brokenLinks);
   return (
-    <div className="result">
+    <div className="result" id="result">
       <h2 className="result-heading"> Results </h2>
       <div className="dummy"></div>
       <div className="meta-info">

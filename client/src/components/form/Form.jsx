@@ -7,6 +7,9 @@ function Form({ setBrokenLinks, setShowResult, setLoadingIcon }) {
   console.log("link is ", link);
 
   const handleBtnClick = () => {
+    const element = document.getElementById("result");
+    element.scrollIntoView({ behavior: "smooth" });
+
     setBrokenLinks([]);
     setLoadingIcon(true);
   };
